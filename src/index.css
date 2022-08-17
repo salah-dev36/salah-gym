@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: 'Josefin Sans';
+  font-family: 'Josefin Sans, sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFAFB;
 }
 
 code {
@@ -11,9 +12,6 @@ code {
 }
 
 * {
-  padding: 0px;
-  margin: 0px;
   box-sizing: border-box;
-
 }
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
-
 import { Link } from "react-router-dom";
+
+import { mainColor } from "../../utils/colors";
+
 
 import { ReactComponent as Logo } from "../../assets/muscle.svg";
 
@@ -29,7 +31,7 @@ export const LinksContainer = styled.div`
 export const HomeLink = styled(Link)`
   text-decoration: none;
   color: #3a1212;
-  border-bottom: 3px solid #ff2625;
+  border-bottom: 3px solid ${mainColor};
 `;
 
 export const ExerciesLink = styled.a`

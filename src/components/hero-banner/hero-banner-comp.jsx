@@ -1,12 +1,14 @@
 import React from "react";
+
 import {
+  BackgroundText,
   BannerContainer,
   BannerImage,
-  Button,
   Content,
   Slogan,
   Title,
 } from "./hero-banner-styles";
+import { BannerButton } from "../buttons/button-types";
 
 import HeroBannerImage from "../../assets/banner.png";
 
@@ -18,7 +20,8 @@ const HeroBanner = () => {
         Sweat, Smile <br /> And Repeat
       </Slogan>
       <Content>Check out the most effective exercises</Content>
-      <Button href="#exercices">Explore exercises</Button>
+      <BannerButton href="#exercices">Explore exercises</BannerButton>
+      <BackgroundText>Exercise</BackgroundText>
       <BannerImage src={HeroBannerImage} />
     </BannerContainer>
   );
