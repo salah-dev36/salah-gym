@@ -18,7 +18,7 @@ const Navigation = () => {
 
       <LinksContainer>
         <HomeLink to="/">Home</HomeLink>
-        <ExerciesLink href="#exercises">Exercies</ExerciesLink>
+        <ExerciesLink href="#exercises">Exercises</ExerciesLink>
       </LinksContainer>
     </NavigationContainer>
   );

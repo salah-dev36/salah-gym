@@ -43,3 +43,9 @@ export const SearchBox = styled.input`
     outline: none;
   }
 `;
+
+export const ScrollBarContainer = styled.div`
+  width: 80%;
+  padding: 20px;
+  margin: 20px auto;
+`;

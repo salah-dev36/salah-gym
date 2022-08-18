@@ -8,12 +8,16 @@ import "./index.css";
 
 import { ExercisesProvider } from "./contexts/exercices-context";
 
+import { DisplayedExercisesProvider } from "./contexts/displayed-exercises-context"
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ExercisesProvider>
-        <App />
+        <DisplayedExercisesProvider>
+          <App />
+        </DisplayedExercisesProvider>
       </ExercisesProvider>
     </BrowserRouter>
   </React.StrictMode>

@@ -29,3 +29,17 @@ export const SearchButton = styled.button`
     opacity: 0.8;
   }
 `;
+
+export const BpButton = styled.button`
+  color: white;
+  background-color: #ffa9a9;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  margin-left: 21px;
+  border: none;
+  padding: 10px;
+`;
+export const TargetButton = styled(BpButton)`
+  background-color: #fcc757;
+`;

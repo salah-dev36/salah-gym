@@ -1,33 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 
 import {
   Caption,
+  ScrollBarContainer,
   SearchBox,
   SearchSectionContainer,
   SectionContainer,
 } from "./search-exercises-styles";
 import { SearchButton } from "../buttons/button-types";
 
-import { ExercisesContext } from "../../contexts/exercices-context";
+import HorizontalScrollBar from "../horizontal-scrollbar/horizontal-scrollbar-comp";
 
-const SearchExercies = ({ eventHandler, searchField }) => {
-  const { allExercises } = useContext(ExercisesContext);
-  const [displayedExercises, setDisplayedExercises] = useState();
-
-  useEffect(() => {
-    if (allExercises) {
-      const filteredExercises = allExercises.filter((exercice) => {
-        return (
-          exercice.name.toLowerCase().includes(searchField) ||
-          exercice.bodyPart.toLowerCase().includes(searchField) ||
-          exercice.target.toLowerCase().includes(searchField)
-        );
-      });
-
-      setDisplayedExercises(filteredExercises);
-    }
-  }, [searchField, allExercises]);
-
+const SearchExercies = ({ eventHandler }) => {
   return (
     <SectionContainer>
       <Caption>
@@ -35,14 +19,17 @@ const SearchExercies = ({ eventHandler, searchField }) => {
         <br />
         Shoud Know
       </Caption>
-      <SearchSectionContainer onSubmit={() => {}}>
+      <SearchSectionContainer>
         <SearchBox
           type="text"
           onChange={eventHandler}
           placeholder="Search Exercises"
         />
-        <SearchButton type="submit">Search</SearchButton>
+        <SearchButton type="button">Search</SearchButton>
       </SearchSectionContainer>
+      <ScrollBarContainer>
+        <HorizontalScrollBar />
+      </ScrollBarContainer>
     </SectionContainer>
   );
 };

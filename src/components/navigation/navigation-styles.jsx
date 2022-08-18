@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { mainColor } from "../../utils/colors";
 
-
 import { ReactComponent as Logo } from "../../assets/muscle.svg";
 
 export const NavigationContainer = styled.div`
@@ -37,5 +36,5 @@ export const HomeLink = styled(Link)`
 export const ExerciesLink = styled.a`
   text-decoration: none;
   color: #3a1212;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #fffafb;
 `;
