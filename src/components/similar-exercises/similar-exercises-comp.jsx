@@ -3,10 +3,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { ExercisesContext } from "../../contexts/exercices-context";
 
 import HorizontalScrollBar from "../horizontal-scrollbar/horizontal-scrollbar-comp";
+import Spinner from "../spinner/spinner-comp";
 
 import { SubTitle } from "../exercise-videos/exercise-videos-styles";
 import { SimilarDataContainer } from "./similar-exercises-styles";
-import Loader from "../loader/loader-comp";
+
 
 const SimilarExercises = ({ exerciseDetail }) => {
   const [similarBodyPart, setSimilarBodyPart] = useState([]);
@@ -30,12 +31,12 @@ const SimilarExercises = ({ exerciseDetail }) => {
     <SimilarDataContainer>
       <SubTitle>Similar Body Part Exercises</SubTitle>
       {
-        similarBodyPart? <HorizontalScrollBar similarExercises={similarBodyPart} /> :<Loader />
+        similarBodyPart? <HorizontalScrollBar similarExercises={similarBodyPart} /> :<Spinner />
       }
       
       <SubTitle>Similar Equipement Exercises</SubTitle>
       {
-        similarBodyPart? <HorizontalScrollBar similarExercises={similarEquipment} /> :<Loader />
+        similarBodyPart? <HorizontalScrollBar similarExercises={similarEquipment} /> :<Spinner />
       }
 
     </SimilarDataContainer>

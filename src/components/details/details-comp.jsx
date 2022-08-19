@@ -20,7 +20,7 @@ const Details = ({ exerciseDetail }) => {
 
   return (
     <DetailsContainer>
-      <DetailImage src={gifUrl} alt={name} loading="lazy" />
+      <DetailImage src={gifUrl} alt={name} />
       <ExerciceInfoContainer>
         <Title>{name}</Title>
         <Description>

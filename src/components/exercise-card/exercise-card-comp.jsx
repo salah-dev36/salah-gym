@@ -17,7 +17,7 @@ const ExerciseCard = ({ exercise, HzCard }) => {
     <>
       {HzCard ? (
         <HzCardContainer to={`/exercises/${id}`}>
-          <ExerciseImage src={gifUrl} alt={name} loading="lazy" />
+          <ExerciseImage src={gifUrl} alt={name}  />
           <ButtonsContainer>
             <BpButton>{bodyPart}</BpButton>
             <TargetButton>{target}</TargetButton>
@@ -26,7 +26,7 @@ const ExerciseCard = ({ exercise, HzCard }) => {
         </HzCardContainer>
       ) : (
         <CardContainer to={`/exercises/${id}`}>
-          <ExerciseImage src={gifUrl} alt={name} loading="lazy" />
+          <ExerciseImage src={gifUrl} alt={name} />
           <ButtonsContainer>
             <BpButton>{bodyPart}</BpButton>
             <TargetButton>{target}</TargetButton>
