@@ -58,7 +58,7 @@ const Exercises = ({ searchField }) => {
   };
 
   return (
-    <ExercicesSectionContainer>
+    <ExercicesSectionContainer id="exercises">
       <Caption>Showing {itemsCount} Results</Caption>
       <ExercisesList>
         {displayedExercises

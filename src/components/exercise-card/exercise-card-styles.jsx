@@ -21,9 +21,24 @@ export const CardContainer = styled(Link)`
   &:hover {
     transform: scale(1.1, 1.1);
   }
+
+  @media screen and (max-width: 949px) {
+    width: 280px;
+    height: 312px;
+    margin-bottom: 30px;
+  }
 `;
 
-export const ExerciseImage = styled.img``;
+export const HzCardContainer = styled(CardContainer) `
+width: 280px;
+height: 350px;
+padding: 10px;
+`
+
+export const ExerciseImage = styled.img`
+  width: 80%;
+  align-self: center;
+  `;
 
 export const ButtonsContainer = styled.div`
   display: flex;

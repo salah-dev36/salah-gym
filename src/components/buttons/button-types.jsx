@@ -15,7 +15,7 @@ export const BannerButton = styled.button`
 `;
 
 export const SearchButton = styled.button`
-  width: 20%;
+  width: 25%;
   border-radius: 4px;
   height: 56px;
   border: none;

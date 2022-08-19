@@ -21,6 +21,8 @@ const bodyParts = [
 ];
 
 const HorizontalScrollBar = ({ isBodyPart, similarExercises }) => {
+  const HzCard = true;
+
   return (
     <ScrollingMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {isBodyPart
@@ -29,8 +31,9 @@ const HorizontalScrollBar = ({ isBodyPart, similarExercises }) => {
               <BodyPartCard key={bodyPartName} bodyPartName={bodyPartName} />
             );
           })
-        : similarExercises.map((item) => {
-            return <ExerciseCard key={item.id} exercise={item} />;
+        : similarExercises.map((exercise) => {
+            return <ExerciseCard HzCard={HzCard}
+            key={exercise.id} exercise={exercise} />;
           })}
     </ScrollingMenu>
   );

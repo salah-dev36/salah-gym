@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-import { mainColor } from "../../utils/colors";
-
 export const VideosSectionContainer = styled.div`
   margin-top: 180px;
   padding: 20px 40px;
+
+  @media screen and (max-width: 950px) {
+    margin-top: 80px;
+  }
 `;
 export const SubTitle = styled.h3`
   font-size: 30px;
@@ -25,4 +27,8 @@ export const Video = styled.a`
   gap: 24px;
   text-decoration: none;
   width: 387px;
+
+  @media screen and (max-width: 950px) {
+    340px;
+  }
 `;

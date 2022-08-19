@@ -46,7 +46,7 @@ export const SearchBox = styled.input`
   font-size: 20px;
   font-weight: 700;
   border-radius: 40px;
-  width: 80%;
+  width: 75%;
   border: none;
   background-color: white;
 

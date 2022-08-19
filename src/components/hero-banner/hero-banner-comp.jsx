@@ -12,6 +12,10 @@ import { BannerButton } from "../buttons/button-types";
 
 import HeroBannerImage from "../../assets/banner.png";
 
+const explore = () => {
+  window.scrollTo({ top: 900, behavior: "smooth" });
+}
+
 const HeroBanner = () => {
   return (
     <BannerContainer>
@@ -20,7 +24,7 @@ const HeroBanner = () => {
         Sweat, Smile <br /> And Repeat
       </Slogan>
       <Content>Check out the most effective exercises</Content>
-      <BannerButton href="#exercices">Explore exercises</BannerButton>
+      <BannerButton onClick={explore}>Explore exercises</BannerButton>
       <BackgroundText>Exercise</BackgroundText>
       <BannerImage src={HeroBannerImage} />
     </BannerContainer>

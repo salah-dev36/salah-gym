@@ -24,6 +24,10 @@ export const ExercisesList = styled.div`
   gap: 110px;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media screen and (max-width:949px) {
+    gap: 50px;
+  }
 `;
 export const PaginationContainer = styled.div`
   margin-top: 120px;

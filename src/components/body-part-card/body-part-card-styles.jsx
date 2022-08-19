@@ -22,9 +22,9 @@ export const CardContainer = styled.div`
   }
 
   @media screen and (max-width:949px) {
-    width: 100px;
-    height: 103px;
-    gap: 10px;
+    width: 120px;
+    height: 124px;
+    gap: 15px;
   }
 `;
 

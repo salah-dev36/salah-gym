@@ -26,7 +26,7 @@ export const LinksContainer = styled.div`
   align-items: center;
   font-size: 20px;
 
-  @media screen and (max-width : 950px) {
+  @media screen and (max-width : 949px) {
     width : 40%;
   }
 `;

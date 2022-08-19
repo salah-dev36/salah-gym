@@ -5,6 +5,8 @@ import { ExercisesContext } from "../../contexts/exercices-context";
 import HorizontalScrollBar from "../horizontal-scrollbar/horizontal-scrollbar-comp";
 
 import { SubTitle } from "../exercise-videos/exercise-videos-styles";
+import { SimilarDataContainer } from "./similar-exercises-styles";
+import Loader from "../loader/loader-comp";
 
 const SimilarExercises = ({ exerciseDetail }) => {
   const [similarBodyPart, setSimilarBodyPart] = useState([]);
@@ -21,15 +23,22 @@ const SimilarExercises = ({ exerciseDetail }) => {
     });
     setSimilarBodyPart(exercisesByBodyParts);
     setSimilarEquipment(exercisesByEquipement);
-  }, []);
+  }, [exerciseDetail]);
 
   return (
-    <div>
+    
+    <SimilarDataContainer>
       <SubTitle>Similar Body Part Exercises</SubTitle>
-      <HorizontalScrollBar similarExercises={similarBodyPart} />
+      {
+        similarBodyPart? <HorizontalScrollBar similarExercises={similarBodyPart} /> :<Loader />
+      }
+      
       <SubTitle>Similar Equipement Exercises</SubTitle>
-      <HorizontalScrollBar similarExercises={similarEquipment} />
-    </div>
+      {
+        similarBodyPart? <HorizontalScrollBar similarExercises={similarEquipment} /> :<Loader />
+      }
+
+    </SimilarDataContainer>
   );
 };
 

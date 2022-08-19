@@ -5,11 +5,22 @@ export const DetailsContainer = styled.div`
   align-items: center;
   padding: 20px 40px;
   gap: 60px;
+
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const DetailImage = styled.img`
   width: 729px;
   height: 742px;
+
+  @media screen and (max-width: 949px) {
+    width: 360px;
+    height: 366px;
+  }
 `;
 
 export const ExerciceInfoContainer = styled.div`
@@ -17,7 +28,7 @@ export const ExerciceInfoContainer = styled.div`
   flex-direction: column;
   align-self: flex-start;
   gap: 36px;
-  padding-top: 80px;
+  
 `;
 
 export const Title = styled.h1`
