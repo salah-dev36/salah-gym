@@ -28,6 +28,11 @@ export const SearchButton = styled.button`
     border: 2px solid ${mainColor};
     opacity: 0.8;
   }
+
+  @media screen and (max-width:949px) {
+    height: 45px;
+    font-size: 16px;
+  }
 `;
 
 export const BpButton = styled.button`

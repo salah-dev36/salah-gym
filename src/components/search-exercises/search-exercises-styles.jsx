@@ -9,6 +9,11 @@ export const SectionContainer = styled.div`
   justify-content: center;
   margin-top: 37px;
   padding: 20px;
+
+  @media screen and (max-width:949px) {
+    padding: 5px;
+  }
+
 `;
 
 export const Caption = styled.h2`
@@ -16,6 +21,12 @@ export const Caption = styled.h2`
   font-weight: 700;
   margin-bottom: 50px;
   font-size: 44px;
+
+  @media screen and (max-width:949px) {
+    padding: 5px;
+    font-size: 34px;
+  }
+
 `;
 
 export const SearchSectionContainer = styled.form`
@@ -23,6 +34,11 @@ export const SearchSectionContainer = styled.form`
   justify-content: center;
   align-items: center;
   width: 70%;
+  margin: 0 auto;
+
+  @media screen and (max-width:949px) {
+    width: 90%;
+  }
 `;
 
 export const SearchBox = styled.input`
@@ -42,10 +58,23 @@ export const SearchBox = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media screen and (max-width:949px) {
+    height: 45px;
+    font-size: 16px;
+  }
 `;
 
 export const ScrollBarContainer = styled.div`
   width: 80%;
   padding: 20px;
   margin: 20px auto;
+
+  @media screen and (min-width: 950px) and (max-width:1200px) {
+   width: 92%
+  }
+
+  @media screen and (max-width:949px) {
+    width: 100%;
+  }
 `;

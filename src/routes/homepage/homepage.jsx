@@ -15,7 +15,7 @@ const Homepage = () => {
   return (
     <div>
       <HeroBanner />
-      <SearchExercies eventHandler={eventHandler} searchField={searchField} />
+      <SearchExercies eventHandler={eventHandler} />
       <Exercises searchField={searchField} />
     </div>
   );

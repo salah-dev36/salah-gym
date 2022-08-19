@@ -25,6 +25,10 @@ export const LinksContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+
+  @media screen and (max-width : 950px) {
+    width : 40%;
+  }
 `;
 
 export const HomeLink = styled(Link)`

@@ -22,5 +22,4 @@ export const LeftArrowContainer = styled.span`
 `;
 
 export const RightArrowContainer = styled(LeftArrowContainer)`
-  margin-left: 40px;
 `;

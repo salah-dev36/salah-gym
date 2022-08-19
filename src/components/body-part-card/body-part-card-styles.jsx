@@ -20,11 +20,22 @@ export const CardContainer = styled.div`
     cursor: pointer;
     transform: scale(1.1, 1.1);
   }
+
+  @media screen and (max-width:949px) {
+    width: 100px;
+    height: 103px;
+    gap: 10px;
+  }
 `;
 
 export const BodyPartImage = styled.img`
   width: 40px;
   height: 40px;
+
+  @media screen and (max-width:949px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const Name = styled.span`
@@ -32,4 +43,8 @@ export const Name = styled.span`
   font-weight: bold;
   color: #3a1212;
   text-transform: capitalize;
+
+  @media screen and (max-width:949px) {
+    font-size: 18px;
+  }
 `;

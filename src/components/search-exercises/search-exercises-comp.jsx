@@ -11,7 +11,7 @@ import { SearchButton } from "../buttons/button-types";
 
 import HorizontalScrollBar from "../horizontal-scrollbar/horizontal-scrollbar-comp";
 
-const SearchExercies = ({ eventHandler }) => {
+const SearchExercies = ({ eventHandler}) => {
   return (
     <SectionContainer>
       <Caption>
@@ -21,11 +21,11 @@ const SearchExercies = ({ eventHandler }) => {
       </Caption>
       <SearchSectionContainer>
         <SearchBox
-          type="text"
+          type="search"
           onChange={eventHandler}
           placeholder="Search Exercises"
         />
-        <SearchButton type="button">Search</SearchButton>
+        <SearchButton>Search</SearchButton>
       </SearchSectionContainer>
       <ScrollBarContainer>
         <HorizontalScrollBar isBodyPart={true} />
