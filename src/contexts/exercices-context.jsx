@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import {
   fetchData,
   exercisesOptions,
-  apiUrl,
+  exercisesApiUrl,
 } from "../utils/exercises-fetching";
 
 export const ExercisesContext = createContext({
@@ -17,7 +17,10 @@ export const ExercisesProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchExercises = async () => {
-      const exerciesesArray = await fetchData(apiUrl, exercisesOptions);
+      const exerciesesArray = await fetchData(
+        exercisesApiUrl,
+        exercisesOptions
+      );
       setAllExercises(exerciesesArray);
     };
     fetchExercises();

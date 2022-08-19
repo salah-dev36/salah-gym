@@ -5,6 +5,8 @@ import { LeftArrow, RightArrow } from "../arrows/arrows-comp";
 
 import { ScrollingMenu } from "./horizontal-scrollbar-styles";
 
+import ExerciseCard from "../exercise-card/exercise-card-comp";
+
 const bodyParts = [
   "back",
   "cardio",
@@ -18,12 +20,18 @@ const bodyParts = [
   "waist",
 ];
 
-const HorizontalScrollBar = () => {
+const HorizontalScrollBar = ({ isBodyPart, similarExercises }) => {
   return (
     <ScrollingMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-      {bodyParts.map((bodyPartName) => {
-        return <BodyPartCard key={bodyPartName} bodyPartName={bodyPartName} />;
-      })}
+      {isBodyPart
+        ? bodyParts.map((bodyPartName) => {
+            return (
+              <BodyPartCard key={bodyPartName} bodyPartName={bodyPartName} />
+            );
+          })
+        : similarExercises.map((item) => {
+            return <ExerciseCard key={item.id} exercise={item} />;
+          })}
     </ScrollingMenu>
   );
 };

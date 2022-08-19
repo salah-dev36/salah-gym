@@ -28,7 +28,7 @@ const SearchExercies = ({ eventHandler }) => {
         <SearchButton type="button">Search</SearchButton>
       </SearchSectionContainer>
       <ScrollBarContainer>
-        <HorizontalScrollBar />
+        <HorizontalScrollBar isBodyPart={true} />
       </ScrollBarContainer>
     </SectionContainer>
   );

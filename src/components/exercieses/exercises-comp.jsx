@@ -24,7 +24,7 @@ const Exercises = ({ searchField }) => {
   const itemsPerPage = 9;
 
   useEffect(() => {
-    if (allExercises) {
+    if (allExercises.length) {
       const filteredExercises = allExercises.filter((exercice) => {
         return (
           exercice.name.toLowerCase().includes(searchField) ||
