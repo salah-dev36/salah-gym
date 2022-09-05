@@ -6,10 +6,9 @@ import icon from "../../assets/gym.png";
 import { DisplayedExercisesContext } from "../../contexts/displayed-exercises-context";
 import { ExercisesContext } from "../../contexts/exercices-context";
 
-const BodyPartCard = ({ bodyPartName }) => {
+const BodyPartCard = ({bodyPartName,setSelectedBodyPart, selectedBodyPart}) => {
   const { setDisplayedExercises } = useContext(DisplayedExercisesContext);
   const { allExercises } = useContext(ExercisesContext);
-  const [selectedBodyPart, setSelectedBodyPart] = useState("");
 
   useEffect(() => {
     const exercisesByBodyParts = allExercises.filter((exercise) => {

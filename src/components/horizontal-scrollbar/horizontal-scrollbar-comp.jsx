@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import BodyPartCard from "../body-part-card/body-part-card-comp";
 import { LeftArrow, RightArrow } from "../arrows/arrows-comp";
@@ -22,18 +22,29 @@ const bodyParts = [
 
 const HorizontalScrollBar = ({ isBodyPart, similarExercises }) => {
   const HzCard = true;
+  const [selectedBodyPart, setSelectedBodyPart] = useState("");
 
   return (
     <ScrollingMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {isBodyPart
         ? bodyParts.map((bodyPartName) => {
             return (
-              <BodyPartCard key={bodyPartName} bodyPartName={bodyPartName} />
+              <BodyPartCard
+                key={bodyPartName}
+                bodyPartName={bodyPartName}
+                selectedBodyPart={selectedBodyPart}
+                setSelectedBodyPart={setSelectedBodyPart}
+              />
             );
           })
         : similarExercises.map((exercise) => {
-            return <ExerciseCard HzCard={HzCard}
-            key={exercise.id} exercise={exercise} />;
+            return (
+              <ExerciseCard
+                HzCard={HzCard}
+                key={exercise.id}
+                exercise={exercise}
+              />
+            );
           })}
     </ScrollingMenu>
   );
